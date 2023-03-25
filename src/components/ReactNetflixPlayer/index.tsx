@@ -215,7 +215,7 @@ export default function ReactNetflixPlayer({
       clearTimeout(timerBuffer.current);
     }
 
-    timerBuffer.current = setTimeout(() => setWaitingBuffer(true), 1000);
+    timerBuffer.current = setTimeout(() => setWaitingBuffer(true), 4000);
 
     if (onTimeUpdate) {
       onTimeUpdate(e);
