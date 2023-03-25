@@ -215,7 +215,7 @@ export default function ReactNetflixPlayer({
       clearTimeout(timerBuffer.current);
     }
 
-    timerBuffer.current = setTimeout(() => setWaitingBuffer(true), 4000);
+    timerBuffer.current = setTimeout(() => setWaitingBuffer(true), 6000);
 
     if (onTimeUpdate) {
       onTimeUpdate(e);
@@ -605,7 +605,7 @@ export default function ReactNetflixPlayer({
       hideVideo={!!error}
       fontFamily={fontFamily}
     >
-      {(videoReady === false || (waitingBuffer === true && playing === true)) && !error && !end && renderLoading()}
+      {(videoReady === false || (playing === true)) && !error && !end && renderLoading()}
 
       {!!overlayEnabled && renderInfoVideo()}
 
