@@ -605,7 +605,7 @@ export default function ReactNetflixPlayer({
       hideVideo={!!error}
       fontFamily={fontFamily}
     >
-      {(videoReady === false || (playing === true)) && !error && !end && renderLoading()}
+      {(videoReady === false || (waitingBuffer === true && playing === true)) && !error && !end && renderLoading()}
 
       {!!overlayEnabled && renderInfoVideo()}
 
